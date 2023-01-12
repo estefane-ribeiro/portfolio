@@ -304,7 +304,7 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  .projeto {
+  #projetos .projeto {
     width: 100%;
     height: auto;
   }
@@ -319,13 +319,13 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  .projects {
+  #projetos .projects {
     display: grid;
     grid-template-columns: 1fr;
     margin: auto;
     align-items: center;
   }
-  .projeto {
+  #projetos .projeto {
     width: 80%;
     margin: auto;
   }
