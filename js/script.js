@@ -27,6 +27,12 @@ document.addEventListener('scroll', () => {
   } else {
     topo.style.display = 'none'
   }
+
+  if (scrollY > 1) {
+    header.classList.add('ativarCor')
+  } else {
+    header.classList.remove('ativarCor')
+  }
 })
 
 // menu- mobile
