@@ -8,6 +8,8 @@ const icon = document.querySelector('.icon')
 const a = document.getElementsByTagName('a')
 const projeto = document.getElementsByClassName('projeto')
 const infors = document.getElementsByClassName('infors')
+const sckills = document.querySelectorAll('.sckill')
+const resumo = document.querySelector('p.resumo')
 
 // dark / linght
 mode.addEventListener('click', () => {
@@ -55,6 +57,57 @@ menu.addEventListener('click', () => {
       body.style.overflow = 'auto'
     })
   }
+})
+
+// mostrar resumo de habilidades
+sckills.forEach(sckill => {
+  sckill.addEventListener('mouseover', () => {
+    for (let i = 0; i < sckills.length; i++) {
+      if (sckill == sckills[i]) {
+        switch (i) {
+          case 0:
+            resumo.textContent =
+              'HTML é uma linguagem de marcação utilizada na construção de páginas na Web.'
+            break
+          case 1:
+            resumo.textContent =
+              'Cascading Style Sheets(CSS) é um mecanismo para adicionar estilos a uma página web.'
+            break
+          case 2:
+            resumo.textContent =
+              'JavaScript é uma linguagem de programação que permite implementar elementos dinâmicos em páginas web.'
+            break
+          case 3:
+            resumo.textContent =
+              'React é uma biblioteca JavaScript com foco em criar interfaces de usuários de forma componentizada.'
+            break
+          case 4:
+            resumo.textContent =
+              'O MySQL é um sistema gerenciador de banco de dados relacional de código aberto usado na maioria das aplicações gratuitas para gerir suas bases de dados. '
+            break
+          case 5:
+            resumo.textContent =
+              'Bootstrap é um framework front-end que fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples.'
+            break
+          case 6:
+            resumo.textContent =
+              'Node.js é um software de código aberto que permite a execução de códigos JavaScript fora de um navegador web'
+            break
+        }
+      }
+    }
+  })
+})
+
+// não mostrar resumo de habilidades
+sckills.forEach(sckill => {
+  sckill.addEventListener('mouseout', () => {
+    for (let i = 0; i < sckills.length; i++) {
+      if (sckill == sckills[i]) {
+        resumo.textContent = ''
+      }
+    }
+  })
 })
 
 // for (let i = 0; i < projeto.length; i++) {

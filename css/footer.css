@@ -1,0 +1,14 @@
+footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color);
+  font-weight: bolder;
+  position: relative;
+  bottom: 0;
+}
+
+footer span {
+  color: var(--color2);
+}

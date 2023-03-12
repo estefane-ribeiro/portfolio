@@ -1,0 +1,249 @@
+section#home {
+  text-align: center;
+
+  font-weight: 500;
+}
+
+section#home p,
+section#home span {
+  font-size: 2.4rem;
+}
+
+section#home p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section#home button {
+  background-color: transparent;
+  padding: 10px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  border: 2px dashed var(--color);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+section#home span {
+  color: var(--color2);
+}
+
+section#home button:hover {
+  border-style: solid;
+  background: var(--color);
+  color: var(--blue-linght);
+}
+
+section#sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 85%;
+  margin: auto;
+  gap: 40px;
+}
+
+section#sobre .perfil {
+  width: 40%;
+  height: 60%;
+}
+
+section#sobre .perfil img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+section#sobre .sobre-mim {
+  text-align: justify;
+  width: 50%;
+}
+
+section#habilidades {
+  text-align: center;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+section#habilidades .about-sckill {
+  width: 50%;
+  color: var(--blue-linght);
+}
+
+section#habilidades .about-sckill p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section#habilidades .sckills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+#habilidades .sckill {
+  padding: 20px;
+  width: 110px;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+#habilidades .sckill img {
+  width: 50px;
+  height: 50px;
+}
+
+#habilidades .sckill:hover {
+  /* transform: scale(1.1); */
+  border: 2px solid var(--color2);
+  border-radius: 10px 2px;
+}
+
+.resumo {
+  color: var(--blue-linght);
+  /* width: 50%; */
+  height: 70px;
+  text-align: justify;
+  padding: 20px;
+}
+
+#projetos {
+  text-align: center;
+}
+
+#projetos .projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.project {
+  margin-top: 50px;
+  background: var(--blue-linght);
+  text-align: justify;
+  border-radius: 8px;
+  width: 320px;
+  position: relative;
+}
+.project .capa {
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+}
+
+.project .infors {
+  padding: 15px;
+  color: var(--color);
+}
+
+.project .infors p {
+  margin-block: 15px;
+}
+
+.project .infors .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project .tecs span {
+  border-radius: 8px;
+  margin-top: 200px;
+  color: var(--color2);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.capa .background {
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.651);
+  width: 100%;
+  height: 100%;
+}
+
+.project .capa img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#projetos .projeto:hover {
+  transform: scale(1.1);
+}
+
+#projetos .projeto:hover .infors {
+  display: flex;
+}
+
+#projetos:has(.projeto:hover) .projeto:not(:hover) {
+  opacity: 0.6;
+  scale: 0.99;
+}
+
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#contato p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contato a {
+  background-color: transparent;
+  padding: 10px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 2px solid var(--color);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#contato a:hover {
+  border-style: solid;
+  background: var(--color);
+  color: var(--blue-linght);
+  transition: 0.5s;
+}
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  bottom: 0;
+  left: 40px;
+}
+
+.social .barra {
+  height: 50px;
+  width: 2px;
+  background-color: var(--color2);
+}
+
+.social a {
+  display: flex;
+  padding: 3px 3px 3px 0;
+  border: 2px solid transparent;
+}
+
+.social a:hover {
+  border-bottom: 2px solid var(--color2);
+}
