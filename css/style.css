@@ -14,15 +14,14 @@
 html {
   --primary-color: #0f172a;
   --background: #f0f0f0;
-  --bgcolor1: rgb(243, 197, 204);
-  --bgcolor2: #ffb6c1;
   --bg-menu: rgba(153, 181, 205, 0.5);
   --primary: #b5c9da;
   --bgblue-medium: #d5e1ea;
   --blue-linght: #f6f9fa;
   --color2: #3d607d;
   --color: #223647;
-  /* --details: rgb(229, 133, 154); */
+  --menu-dark: #344864f1;
+  --dark: #000b2d;
 }
 
 body {
@@ -36,7 +35,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
-  border: 5px solid var(--color);
 }
 
 a {
@@ -124,52 +122,40 @@ section {
 
 .mode-dark {
   background: var(--primary-color);
-  color: var(--background);
+  background-attachment: fixed;
+  color: var(--blue-linght);
 }
 
-.mode-dark header {
-  border-bottom: 1px solid var(--details);
+.mode-dark header a {
+  color: var(--blue-linght);
 }
 
-.mode-dark #sobre p {
-  color: #c4c4c4;
+.mode-dark header.ativarCor {
+  background-color: #000b2d;
 }
 
-.mode-dark footer {
-  background-color: var(--details);
+.mode-dark span {
+  color: var(--color2);
 }
 
-.mode-dark footer p {
-  color: var(--background);
+.mode-dark header h1 div {
+  color: var(--blue-linght);
 }
 
-.mode-dark footer span {
-  color: var(--primary-color);
+.mode-dark #sobre .perfil img {
+  border-color: var(--dark);
 }
 
-@media (max-width: 900px) {
-  #projetos .project {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 700px) {
-  header ul {
-    display: none;
-  }
-  header .icon-menu {
-    display: block;
-  }
+.mode-dark footer div {
+  color: var(--blue-linght);
 }
 
-@media (max-width: 600px) {
-  #projetos .projects {
-    grid-template-columns: 1fr;
-    margin: auto;
-    align-items: center;
-  }
-  #projetos .project {
-    width: 80%;
-    margin: auto;
-  }
+.mode-dark section#contato a,
+.mode-dark section#home button {
+  color: var(--blue-linght);
+  border-color: var(--blue-linght);
+}
+
+.mode-dark .mobile-menu {
+  background-color: var(--dark);
 }

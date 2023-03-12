@@ -1,7 +1,7 @@
 .mobile-menu {
   height: 100%;
   /* background-color: #0f172ac4; */
-  background-color: var(--bg-menu);
+  background-color: var(--primary);
   flex-direction: column;
   justify-content: center;
   gap: 50px;
@@ -61,4 +61,20 @@ header a {
 header a:hover {
   /* color: var(--details); */
   border-bottom: 1px solid var(--details);
+}
+
+@media (max-width: 1000px) {
+  header a,
+  header h1 {
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 880px) {
+  header ul {
+    display: none;
+  }
+  header .icon-menu {
+    display: block;
+  }
 }
