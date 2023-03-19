@@ -113,6 +113,9 @@ section {
   0% {
     width: 0px;
   }
+  10% {
+    width: 0px;
+  }
   90% {
     width: 235px;
   }
@@ -132,6 +135,9 @@ section {
 
 @keyframes typing-mobile {
   0% {
+    width: 0px;
+  }
+  10% {
     width: 0px;
   }
   90% {
