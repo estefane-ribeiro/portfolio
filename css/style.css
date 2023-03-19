@@ -180,7 +180,7 @@ section {
   color: var(--blue-light);
 }
 
-.mode-dark section#contato a,
+.mode-dark section#contato > a,
 .mode-dark section#home button {
   color: var(--blue-light);
   border-color: var(--blue-light);

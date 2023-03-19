@@ -58,9 +58,10 @@ header a {
   border-bottom: 1px solid transparent;
   padding-bottom: 5px;
   letter-spacing: 5px;
+  transition: 800ms;
 }
 
-header a:hover {
+header nav a:hover {
   /* color: var(--details); */
   border-bottom: 1px solid var(--details);
 }

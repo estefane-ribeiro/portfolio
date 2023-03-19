@@ -50,7 +50,7 @@ menu.addEventListener('click', () => {
     menu.src = './assets/fechar.png'
     body.style.overflow = 'hidden'
   }
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
     a[i].addEventListener('click', () => {
       header.classList.remove('mobile-menu')
       menu.src = './assets/menu-aberto.png'
