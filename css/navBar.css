@@ -1,7 +1,7 @@
 .mobile-menu {
   height: 100%;
   /* background-color: #0f172ac4; */
-  background-color: var(--primary);
+  background-color: var(--blue);
   flex-direction: column;
   justify-content: center;
   gap: 50px;
@@ -18,28 +18,29 @@ header {
   padding: 20px;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 50px;
+  padding-inline: 4rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 7;
-  color: var(--color);
+  color: var(--blue-dark);
   background: transparent;
+  font-size: clamp(1.4rem, 1.6rem, 2vw);
 }
 
 header.ativarCor {
-  background: var(--primary);
+  background: var(--blue);
 }
 
 header h1 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 header h1 span,
 section#home p span {
-  color: var(--color2);
+  color: var(--details);
 }
 
 header ul {
@@ -50,6 +51,7 @@ header ul {
 
 header .icon-menu {
   display: none;
+  cursor: pointer;
 }
 
 header a {
@@ -76,5 +78,10 @@ header a:hover {
   }
   header .icon-menu {
     display: block;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding-inline: 1.5rem;
   }
 }

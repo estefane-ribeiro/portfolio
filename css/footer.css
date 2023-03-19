@@ -3,12 +3,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color);
+  color: var(--blue-dark);
   font-weight: bolder;
   position: relative;
   bottom: 0;
 }
 
 footer span {
-  color: var(--color2);
+  color: var(--details);
 }

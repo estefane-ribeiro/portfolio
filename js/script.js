@@ -29,7 +29,7 @@ document.addEventListener('scroll', () => {
   } else {
     topo.style.display = 'none'
   }
-
+  // MUDAR COR DO HEADER
   if (scrollY > 1) {
     header.classList.add('ativarCor')
   } else {

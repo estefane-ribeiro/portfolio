@@ -1,12 +1,14 @@
 section#home {
   text-align: center;
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-weight: 500;
 }
 
 section#home p,
 section#home span {
-  font-size: 2.4rem;
+  font-size: clamp(3rem, 4rem, 5vw);
 }
 
 section#home p {
@@ -19,19 +21,19 @@ section#home button {
   padding: 10px;
   letter-spacing: 2px;
   border-radius: 8px;
-  border: 2px dashed var(--color);
+  border: 2px dashed var(--blue-dark);
   cursor: pointer;
   margin-top: 20px;
 }
 
 section#home span {
-  color: var(--color2);
+  color: var(--details);
 }
 
 section#home button:hover {
   border-style: solid;
-  background: var(--color);
-  color: var(--blue-linght);
+  background: var(--blue-dark);
+  color: var(--blue-light);
 }
 
 section#sobre {
@@ -52,7 +54,7 @@ section#sobre .perfil {
 section#sobre .perfil img {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 10px 2px;
 }
 section#sobre .sobre-mim {
   text-align: justify;
@@ -71,7 +73,7 @@ section#habilidades {
 
 section#habilidades .about-sckill {
   width: 50%;
-  color: var(--blue-linght);
+  color: var(--blue-light);
 }
 
 section#habilidades .about-sckill p {
@@ -103,16 +105,17 @@ section#habilidades .sckills {
 
 #habilidades .sckill:hover {
   /* transform: scale(1.1); */
-  border: 2px solid var(--color2);
+  border: 2px solid var(--details);
   border-radius: 10px 2px;
 }
 
 .resumo {
-  color: var(--blue-linght);
+  color: var(--blue-light);
   /* width: 50%; */
   height: 70px;
   text-align: justify;
   padding: 20px;
+  transition: all 2s;
 }
 
 #projetos {
@@ -127,12 +130,13 @@ section#habilidades .sckills {
 
 .project {
   margin-top: 50px;
-  background: var(--blue-linght);
+  background: var(--blue-light);
   text-align: justify;
   border-radius: 8px;
   width: 320px;
   min-height: 400px;
   position: relative;
+  transition: 1s;
 }
 .project .capa {
   position: relative;
@@ -146,11 +150,14 @@ section#habilidades .sckills {
 
 .project .capa img {
   object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .project .infors {
   padding: 15px;
-  color: var(--color);
+  color: var(--blue-dark);
 }
 
 .project .infors p {
@@ -168,7 +175,7 @@ section#habilidades .sckills {
 .project .tecs span {
   border-radius: 8px;
   margin-top: 200px;
-  color: var(--color2);
+  color: var(--details);
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -181,20 +188,7 @@ section#habilidades .sckills {
   height: 100%;
 }
 
-.project .capa img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-#projetos .projeto:hover {
-  transform: scale(1.1);
-}
-
-#projetos .projeto:hover .infors {
-  display: flex;
-}
-
-#projetos:has(.projeto:hover) .projeto:not(:hover) {
+#projetos:has(.project:hover) .project:not(:hover) {
   opacity: 0.6;
   scale: 0.99;
 }
@@ -216,15 +210,15 @@ section#habilidades .sckills {
   padding: 10px;
   letter-spacing: 2px;
   border-radius: 5px;
-  border: 2px solid var(--color);
+  border: 2px solid var(--blue-dark);
   cursor: pointer;
   margin-top: 20px;
 }
 
 #contato a:hover {
   border-style: solid;
-  background: var(--color);
-  color: var(--blue-linght);
+  background: var(--blue-dark);
+  color: var(--blue-light);
   transition: 0.5s;
 }
 
@@ -241,7 +235,7 @@ section#habilidades .sckills {
 .social .barra {
   height: 50px;
   width: 2px;
-  background-color: var(--color2);
+  background-color: var(--details);
 }
 
 .social a {
@@ -251,7 +245,7 @@ section#habilidades .sckills {
 }
 
 .social a:hover {
-  border-bottom: 2px solid var(--color2);
+  border-bottom: 2px solid var(--details);
 }
 
 @media (max-width: 1120px) {
@@ -286,9 +280,9 @@ section#habilidades .sckills {
   }
   section#sobre .perfil img {
     border-radius: 100%;
-    width: 80%;
+
     display: flex;
-    border: 5px solid var(--color);
+    border: 3px solid var(--blue-dark);
     margin: auto;
   }
 }

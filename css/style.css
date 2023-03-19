@@ -8,38 +8,40 @@
 :root {
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
-  color: var(--color);
+  color: var(--blue-dark);
+  font-size: 62.5%;
 }
 
 html {
-  --primary-color: #0f172a;
-  --background: #f0f0f0;
+  --black: #0f172a; /* black*/
+  --white: #f0f0f0; /* background*/
   --bg-menu: rgba(153, 181, 205, 0.5);
-  --primary: #b5c9da;
-  --bgblue-medium: #d5e1ea;
-  --blue-linght: #f6f9fa;
-  --color2: #3d607d;
-  --color: #223647;
-  --menu-dark: #344864f1;
+  --blue: #b5c9da; /* blue */
+  --blue-medium: #d5e1ea;
+  --blue-light: #f6f9fa;
+  --details: #3d607d; /*details*/
+  --blue-dark: #223647; /*color*/
+  --grey-blue: #344864f1; /*menu-dark*/
   --dark: #000b2d;
 }
 
 body {
-  color: var(--color);
+  color: var(--blue-dark);
   background: linear-gradient(
-    var(--primary),
-    var(--bgblue-medium),
-    var(--blue-linght)
+    var(--blue),
+    var(--blue-medium),
+    var(--blue-light)
   );
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
+  font-size: clamp(1.4rem, 1.6rem, 2vw);
 }
 
 a {
   text-decoration: none;
-  color: var(--color);
+  color: var(--blue-dark);
 }
 
 span {
@@ -56,7 +58,7 @@ h2 {
 }
 
 .topo {
-  background-color: var(--color2);
+  background-color: var(--details);
   width: 50px;
   height: 50px;
   position: fixed;
@@ -74,7 +76,7 @@ h2 {
 
 .topo:hover {
   transform: scale(1.05);
-  background-color: var(--color);
+  background-color: var(--blue-dark);
 }
 
 main {
@@ -99,15 +101,23 @@ section {
   font-weight: 700;
   width: 240px;
   animation: blinkCursor 500ms steps(40) infinite normal,
-    typing infinite steps(30) 2.5s normal;
+    typing infinite steps(50) 3s alternate;
+  animation-delay: 400ms;
+}
+
+.typing_animation:hover {
+  animation-play-state: paused;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
+  0% {
+    width: 0px;
   }
-  to {
-    width: 230px;
+  90% {
+    width: 235px;
+  }
+  100% {
+    width: 235px;
   }
 }
 
@@ -120,14 +130,34 @@ section {
   }
 }
 
+@keyframes typing-mobile {
+  0% {
+    width: 0px;
+  }
+  90% {
+    width: 180px;
+  }
+  100% {
+    width: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .typing_animation {
+    animation: blinkCursor 500ms steps(40) infinite normal,
+      typing-mobile infinite steps(50) 3s alternate;
+    animation-delay: 400ms;
+  }
+}
+
 .mode-dark {
-  background: var(--primary-color);
+  background: var(--black);
   background-attachment: fixed;
-  color: var(--blue-linght);
+  color: var(--blue-light);
 }
 
 .mode-dark header a {
-  color: var(--blue-linght);
+  color: var(--blue-light);
 }
 
 .mode-dark header.ativarCor {
@@ -135,11 +165,11 @@ section {
 }
 
 .mode-dark span {
-  color: var(--color2);
+  color: var(--details);
 }
 
 .mode-dark header h1 div {
-  color: var(--blue-linght);
+  color: var(--blue-light);
 }
 
 .mode-dark #sobre .perfil img {
@@ -147,13 +177,13 @@ section {
 }
 
 .mode-dark footer div {
-  color: var(--blue-linght);
+  color: var(--blue-light);
 }
 
 .mode-dark section#contato a,
 .mode-dark section#home button {
-  color: var(--blue-linght);
-  border-color: var(--blue-linght);
+  color: var(--blue-light);
+  border-color: var(--blue-light);
 }
 
 .mode-dark .mobile-menu {
