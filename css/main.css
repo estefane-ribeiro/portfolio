@@ -30,9 +30,10 @@ section#home #curriculo {
   transition: 800ms;
 }
 
-#curriculo:hover {
+section#home #curriculo:hover {
   color: var(--blue-light);
   border: 2px solid var(--blue-dark);
+  background-color: var(--blue-dark);
   
 }
 
