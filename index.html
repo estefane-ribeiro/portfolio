@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="./css/navBar.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portifólio - Estefane Ribeio</title>
   </head>
-  <body>
+  <body onload="ativar()">
     <header>
       <a href="#topo"
         ><h1>
@@ -42,9 +43,9 @@
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato">Contato</a></li>
           <li>
-            <a href="#" class="dark"
+            <button class="mode"
               ><img src="./assets/lua.png" alt="Modo dark" class="icon"
-            /></a>
+            /></button>
           </li>
         </ul>
       </nav>
@@ -66,21 +67,20 @@
           Olá, meu nome é <span>Estefane Ribeiro</span> e sou uma desenvolvedora
         </p>
         <span class="typing_animation">FullStack!!!</span>
-        <a
-          href="curriculo/Estefane-Ribeiro.pdf
-        "
+        <div class="resumo">
+          <a href="curriculo/Estefane-Ribeiro.pdf"
           download=""
           title="Baixar currículo"
-          id="curriculo"
-        >
-          Resumo</a
-        >
+          id="curriculo">
+          Resumo</a>
+        </div>
+        
       </section>
       <section id="sobre">
-        <div class="perfil">
-          <img src="assets/estefane.JPG" alt="foto de Estefane Ribeiro" />
+        <div class="perfil" data-aos="fade-right">
+          <img src="assets/estefane.png" alt="foto de Estefane Ribeiro" />
         </div>
-        <div class="sobre-mim">
+        <div class="sobre-mim" data-aos="fade-left">
           <h2>Sobre mim</h2>
           <p>
             Meu nome é Estefane Ribeiro, sou estudante de Ciências da computação
@@ -135,14 +135,21 @@
       <section id="projetos">
         <h2>Projetos</h2>
         <div class="projects">
-          <div class="project">
+          <div class="project" data-aos="fade-right">
             <div class="capa">
               <img src="./assets/guiapress.png" alt="" />
               <div class="background"></div>
             </div>
             <div class="infors">
               <div class="title">
-                <h3>Blog</h3>
+                <h3>
+                  <a
+                    href="https://github.com/estefane-ribeiro/blog"
+                    target="_blank"
+                  >
+                    Blog
+                  </a>
+                </h3>
                 <span>
                   <!-- <a href=""><img src="./assets/abrir.png" alt="Abrir" /></a> -->
                   <a
@@ -174,14 +181,21 @@
               </div>
             </div>
           </div>
-          <div class="project">
+          <div class="project" data-aos="fade-top">
             <div class="capa">
               <img src="./assets/perguntas-anonimas.png" alt="" />
               <div class="background"></div>
             </div>
             <div class="infors">
               <div class="title">
-                <h3>Guia pergunta</h3>
+                <h3>
+                  <a
+                    href="https://github.com/estefane-ribeiro/GuiaPergunta"
+                    target="_blank"
+                  >
+                    Guia pergunta
+                  </a>
+                </h3>
                 <span>
                   <!-- <img src="./assets/abrir.png" alt="Abrir" /> -->
                   <a
@@ -212,14 +226,21 @@
               </div>
             </div>
           </div>
-          <div class="project">
+          <div class="project" data-aos="fade-left">
             <div class="capa">
               <img src="./assets/sio.png" alt="" />
               <div class="background"></div>
             </div>
             <div class="infors">
               <div class="title">
-                <h3>Ladding page sio</h3>
+                <h3>
+                  <a
+                    href="https://estefane-ribeiro.github.io/ladding-page-sio/"
+                    target="_blank"
+                    >
+                    Ladding page sio
+                  </a>
+                </h3>
                 <span>
                   <a
                     href="https://estefane-ribeiro.github.io/ladding-page-sio/"
@@ -252,12 +273,12 @@
         </div>
       </section>
       <section id="contato">
-        <h2>Entre em contato comigo</h2>
-        <p>
+        <h2 data-aos="fade-right">Entre em contato comigo</h2>
+        <p data-aos="fade-left">
           Entre em contato caso tenha alguma dúvida ou tenha alguma pergunta ou
           simplesmente para dizer, olá, ficarei feliz em responder.
         </p>
-        <a href="mailto:estefaneribeiroveras@gmail.com">Diga, olá.</a>
+        <a href="mailto:estefaneribeiroveras@gmail.com" >Diga, olá.</a>
         <div class="social">
           <a href="https://github.com/estefane-ribeiro" target="_blank"
             ><img
@@ -269,7 +290,7 @@
             href="https://www.linkedin.com/in/estefane-ribeiro-410a1822a/"
             target="_blank"
             title="Me visite no Linkedin"
-            ><img src="./assets/linkedin.png" alt="Linkedin"
+            ><img src="./assets/linkedin.png" alt="Linkedin" 
           /></a>
           <a
             href="https://www.instagram.com/_estefane_veras/"
@@ -290,5 +311,11 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800
+      })
+    </script>
   </body>
 </html>

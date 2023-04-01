@@ -55,15 +55,38 @@ header .icon-menu {
 }
 
 header a {
-  border-bottom: 1px solid transparent;
-  padding-bottom: 5px;
   letter-spacing: 5px;
   transition: 800ms;
 }
 
-header nav a:hover {
-  /* color: var(--details); */
+header li {
+  position: relative;
+  
+
+}
+
+header nav a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  border-bottom: 2px solid var(--details);
+  transition: 0.5s;
+}
+
+header nav a:hover::before {
+  width: 100%;
+}
+
+/* header nav a:hover {
+  // color: var(--details); 
   border-bottom: 1px solid var(--details);
+} */
+
+.mode {
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -84,5 +107,14 @@ header nav a:hover {
 @media (max-width: 500px) {
   header {
     padding-inline: 1.5rem;
+  }
+}
+
+@keyframes underline {
+  50% {
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }

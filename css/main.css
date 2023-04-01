@@ -15,6 +15,9 @@ section#home p {
   width: 80%;
   margin: 0 auto;
 }
+section#home span {
+  color: var(--details);
+}
 
 section#home #curriculo {
   background-color: transparent;
@@ -27,14 +30,10 @@ section#home #curriculo {
   transition: 800ms;
 }
 
-section#home span {
-  color: var(--details);
-}
-
-section#home #curriculo:hover {
-  border-style: solid;
-  background: var(--blue-dark);
+#curriculo:hover {
   color: var(--blue-light);
+  border: 2px solid var(--blue-dark);
+  
 }
 
 section#sobre {
@@ -111,9 +110,9 @@ section#habilidades .sckills {
   border-radius: 10px 2px;
 }
 
-.resumo {
+#habilidades .resumo {
   color: var(--blue-light);
-  /* width: 50%; */
+  
   height: 70px;
   text-align: justify;
   padding: 20px;
@@ -191,7 +190,7 @@ section#habilidades .sckills {
 }
 
 #projetos:has(.project:hover) .project:not(:hover) {
-  opacity: 0.6;
+  opacity: 0.8;
   scale: 0.99;
 }
 
@@ -250,6 +249,9 @@ section#habilidades .sckills {
 .social a:hover {
   border-bottom: 2px solid var(--details);
 }
+
+
+/* Resposividade */
 
 @media (max-width: 1120px) {
   #projetos .projects {

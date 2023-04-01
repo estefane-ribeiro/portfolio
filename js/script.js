@@ -1,5 +1,5 @@
 const body = document.getElementsByTagName('body')[0]
-const mode = document.querySelector('.dark')
+const mode = document.querySelector('.mode')
 const topo = document.querySelector('.topo')
 const menu = document.querySelector('.icon-menu')
 const header = document.getElementsByTagName('header')[0]
@@ -11,16 +11,43 @@ const infors = document.getElementsByClassName('infors')
 const sckills = document.querySelectorAll('.sckill')
 const resumo = document.querySelector('p.resumo')
 
-// dark / linght
-mode.addEventListener('click', () => {
-  if (body.classList.contains('mode-dark')) {
-    body.classList.remove('mode-dark')
-    icon.src = './assets/lua.png'
-  } else {
-    body.classList.add('mode-dark')
-    icon.src = './assets/sol.png'
+
+function ativar() {
+  if(localStorage.color == 'dark-mode') {
+      body.classList.add('dark-mode')
+      icon.src = './assets/lua.png'
+  }else {
+      body.classList.remove('dark-mode')
+      icon.src = './assets/sol.png'
   }
+}
+
+mode.addEventListener('click', () => {
+   localStorage.color = body.classList.contains('dark-mode') ? 'linght' : 'dark-mode'
+  
+  if(localStorage.color == 'dark-mode') {
+      body.classList.add('dark-mode')
+      icon.src = './assets/lua.png'
+  }else {
+      body.classList.remove('dark-mode')
+      icon.src = './assets/sol.png'
+  }
+
 })
+
+
+
+// dark / linght
+// mode.addEventListener('click', () => {
+//   const color = body.classList.contains('dark-mode') ? 'dark-mode' : 'linght'
+//   if (body.classList.contains('dark-mode')) {
+//     body.classList.remove('dark-mode')
+//     icon.src = './assets/lua.png'
+//   } else {
+//     body.classList.add('dark-mode')
+//     icon.src = './assets/sol.png'
+//   }
+// })
 
 // subir ao topo
 document.addEventListener('scroll', () => {
@@ -110,8 +137,3 @@ sckills.forEach(sckill => {
   })
 })
 
-// for (let i = 0; i < projeto.length; i++) {
-//   a[i].addEventListener('mousemove', () => {
-//     infors[i].style.display = 'block'
-//   })
-// }
